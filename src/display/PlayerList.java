@@ -40,7 +40,7 @@ public class PlayerList implements Runnable {
 	
 	public static void setupDisplay(Player player) {
 		
-		IChatBaseComponent headerComponent = ChatSerializer.a("{\"text\": \"\n     " + ChatColor.WHITE + ChatColor.BOLD + "Welcome to fL0X1k server     \n\"}");
+		IChatBaseComponent headerComponent = ChatSerializer.a("{\"text\": \"\n     " + ChatColor.WHITE + ChatColor.BOLD + "Welcome to fL0X1k server     \n     " + ChatColor.RED + "Please, do not come back.     \n\"}");
 		IChatBaseComponent footerComponent = ChatSerializer.a("{\"text\": \"\n     " + ChatColor.WHITE + "www.flox.tk | Online players: " + PlayerCollector.getOnlinePlayers() + " / " + Bukkit.getMaxPlayers() + "     \n        Server running at Homelab        \n\"}");
 		
 		PacketPlayOutPlayerListHeaderFooter tablistPacket = new PacketPlayOutPlayerListHeaderFooter();
