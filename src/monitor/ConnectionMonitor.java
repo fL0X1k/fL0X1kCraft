@@ -56,6 +56,7 @@ public class ConnectionMonitor implements Listener {
 		
 		PlayerCollector.unRegisterPlayer(player);
 	
-		Start.keepRunning = false;
+		if (PlayerCollector.getOnlinePlayers() == 0)
+			Start.keepRunning = false;
 	}
 }
