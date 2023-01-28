@@ -6,6 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/Leizzy/Desktop/server/server.jar"/>
+	<classpathentry kind="lib" path="jar_output_path"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
