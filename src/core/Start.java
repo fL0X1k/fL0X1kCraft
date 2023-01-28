@@ -2,8 +2,8 @@ package core;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import display.ServerListUtility;
-import monitor.ConnectionMonitor;
+import display.*;
+import monitor.*;
 
 public class Start extends JavaPlugin {
 
@@ -15,8 +15,13 @@ public class Start extends JavaPlugin {
 		
 		getServer().getPluginManager().registerEvents(new ConnectionMonitor(), this);
 		getServer().getPluginManager().registerEvents(new ServerListUtility(), this);
+		getServer().getPluginManager().registerEvents(new CommandMonitor(), this);
+		getServer().getPluginManager().registerEvents(new ChatMonitor(), this);
+		
+		new Thread(new PlayerList(true)).start();
 	}
 	
+	@Override
 	public void onDisable() {
 		keepRunning = false;
 	}
